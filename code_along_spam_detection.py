@@ -5,7 +5,7 @@ spark = SparkSession.builder.appName('spamDetection').getOrCreate()
 
 
 # Read spam email data
-data = spark.read.csv('smsspamcollection/SMSSpamCollection', inferSchema=True, sep='\t')
+data = spark.read.csv('smsspamcollection/SMSSpamCollection.octet-stream', inferSchema=True, sep='\t')
 
 print('No. of rows:', data.count())
 data.show(10)
